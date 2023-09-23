@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { EducationModule } from './education/education.module';
+import { SkillsModule } from './skills/skills.module';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { EducationModule } from './education/education.module';
       // entities: [__dirname + '/**/*.entity{.ts,.js}'],
     }),
     EducationModule,
+    SkillsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
