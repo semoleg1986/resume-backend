@@ -21,10 +21,12 @@ import {
   ApiOkResponse,
   ApiOperation,
   ApiParam,
+  ApiTags,
 } from '@nestjs/swagger';
 import { Education } from './entities/education.entity';
 import { plainToClass } from 'class-transformer';
 
+@ApiTags('Education')
 @Controller('education')
 export class EducationController {
   constructor(private readonly educationService: EducationService) {}
