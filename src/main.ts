@@ -17,6 +17,11 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('doc', app, document);
   app.setGlobalPrefix('api');
+  app.enableCors({
+    origin: ['http://localhost:5173'], // Замените на список доменов, которым разрешен доступ
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true, // Если вы работаете с куки или аутентификацией
+  });
   await app.listen(port);
 }
 bootstrap();
