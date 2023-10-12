@@ -21,6 +21,7 @@ async function bootstrap() {
     origin: [
       'http://localhost:5173',
       'https://dev-majestic-brigadeiros-820f2b.netlify.app',
+      "https://majestic-brigadeiros-820f2b.netlify.app",
     ],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
